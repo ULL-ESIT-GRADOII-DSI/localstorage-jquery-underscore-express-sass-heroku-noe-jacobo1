@@ -16,12 +16,13 @@ Despliegue la aplicación en Heroku usando Express.JS
 
 #Hemos aprendido
 
+Proximamente
 
 
 **Link de los repositorios**
 
-[Organizacion](https://github.com/ULL-ESIT-GRADOII-DSI/localstorage-jquery-underscore-express-sass-heroku-noe-jacobo1)
-[Nuestra organización](https://github.com/noe-jacoboDSI/localstorage-jquery-underscore-express-sass)
+* [Repo. de la Práctica](https://github.com/ULL-ESIT-GRADOII-DSI/localstorage-jquery-underscore-express-sass-heroku-noe-jacobo1)
+* [Nuestro repo. de la organización](https://github.com/noe-jacoboDSI/localstorage-jquery-underscore-express-sass)
 
 https://github.com/noe-jacoboDSI/localstorage-jquery-underscore-express-sass
 
