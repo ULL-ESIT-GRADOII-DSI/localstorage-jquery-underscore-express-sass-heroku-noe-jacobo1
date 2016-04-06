@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mocha</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mocha.css" >
+  </head>
+  <body>
+
+
+
+    <script type="text/html" id='fillTable'>
+      <table id="result" class="center">
+        <% _.each(items, function(name) { %>
+          <tr class="<%= name.rowClass %>">
+            <% _.each(name.value, function(cell) { %>
+              <td><%= cell %></td>
+            <% }); %>
+          </tr>
+        <% }); %>
+      </table>
+    </script>
+
+    <table>
+      <tr>
+        <th>CSV string:</th> <!-- autofocus attribute is HTML5 -->
+        <td><textarea autofocus cols = "80" rows = "5" id="original"></textarea></td>
+      </tr>
+    </table>
+    <button type="button">table:</button><br>
+    <span class="output" id="finaltable"></span>
+
+
+
+    <div id="mocha"><p><a href=".">Pruebas para CSV</a></p></div>
+    <script src="mocha.js"></script>
+
+    <script src="blanket.js"></script>
+    <script src="../assets/js/csv.js" data-cover></script>
+    <script src="../assets/js/main.js" data-cover></script>
+    <script>mocha.setup('bdd');</script>
+        <script>mocha.setup('tdd')</script>
+    <script>
+      mocha.run();
+    </script>
+    <script src="tests.js"></script>
+  </body>
+</html>
