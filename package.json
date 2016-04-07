@@ -17,7 +17,7 @@
     "url": "https://github.com/noe-jacoboDSI/localstorage-jquery-underscore-express-sass/issues"
   },
   "devDependencies": {
-    "blanket": "^1.2.3",
+    "blanket": "^1.1.5",
     "chai": "^3.5.0",
     "mocha": "^2.4.5",
     "sinon": "^1.17.3"

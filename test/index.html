@@ -4,9 +4,12 @@
     <title>Mocha</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="mocha.css" >
-  </head>
-  <body>
+    <link rel="stylesheet" href="../assets/css/global.css" >
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
 
 
@@ -22,6 +25,14 @@
       </table>
     </script>
 
+
+  </head>
+  <body>
+
+    <div id="mocha"><p><a href=".">Pruebas para CSV</a></p></div>
+    <div id="messages"></div>
+
+
     <table>
       <tr>
         <th>CSV string:</th> <!-- autofocus attribute is HTML5 -->
@@ -31,19 +42,26 @@
     <button type="button">table:</button><br>
     <span class="output" id="finaltable"></span>
 
-
-
-    <div id="mocha"><p><a href=".">Pruebas para CSV</a></p></div>
+    <script src="chai.js"></script>
     <script src="mocha.js"></script>
+    <script src="blanket.js"
+                data-cover-adapter="blanket_mocha.js"></script>
 
-    <script src="blanket.js"></script>
-    <script src="../assets/js/csv.js" data-cover></script>
     <script src="../assets/js/main.js" data-cover></script>
-    <script>mocha.setup('bdd');</script>
+    <script src="../assets/js/csv.js" data-cover></script>
+
+
+
+
+
+
+
+    <!--script>mocha.setup('bdd');</script-->
         <script>mocha.setup('tdd')</script>
+        <script src="tests.js"></script>
     <script>
       mocha.run();
     </script>
-    <script src="tests.js"></script>
+
   </body>
 </html>
