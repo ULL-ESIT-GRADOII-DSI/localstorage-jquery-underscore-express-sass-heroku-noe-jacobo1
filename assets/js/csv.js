@@ -22,19 +22,14 @@
       var error = false;
 
       // skip empty lines and comments
-      if (temp.match(/(^\s*$)|(^#.*)/)) continue; 
+      if (temp.match(/(^\s*$)|(^#.*)/)) continue;
       if (m) {
         result = m.map(removeQuotes);
         error = (commonLength != m.length);
         var rowclass = error? 'error' : '';
         r.push({ value: result, rowClass: rowclass });
       }
-      else {
-        var errmsg = 'La fila "' + temp + '" no es un valor de CSV permitido.';
-        r.push({value: errmsg.split("").splice(commonLength), rowClass: 'error'});
-      }
     }
     return r;
   };
 })(this);
-
