@@ -4,7 +4,8 @@
   "description": "Intregrantes del grupo Noé y Jacobo",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/karma/bin/karma start --single-run"
+    "test": "./node_modules/karma/bin/karma start --single-run",
+    "view": "open http://localhost:8080/"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,9 @@
   "devDependencies": {
     "blanket": "^1.1.5",
     "chai": "^3.5.0",
+    "ejs": "^2.4.1",
+    "express": "^4.9.0",
+    "express-ejs-layouts": "^2.0.0",
     "html2js": "*",
     "karma": "*",
     "karma-chai": "^0.1.0",
@@ -34,6 +38,10 @@
     "mocha": "^2.4.5",
     "phantomjs-prebuilt": "*",
     "sinon": "^1.17.3"
+  },
+  "dependencies": {
+    "ejs": "^1.0.0",
+    "express": "^4.6.1"
   },
   "homepage": "https://github.com/noe-jacoboDSI/localstorage-jquery-underscore-express-sass#readme"
 }
