@@ -25,14 +25,16 @@ module.exports = function(config) {
     files: [
     'https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js',
     'https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js',
-    'test/index.html',
     'assets/js/*.js',
-    'test/test.js',//test
+    'test/index.html',
+    'index.html',
+    'test/tests.js'//test
+
 
     ],
 
     preprocessors: {
-      'test/index.html': ['html2js']
+      'test/index.html': ['html2js'],
     },
 
 
