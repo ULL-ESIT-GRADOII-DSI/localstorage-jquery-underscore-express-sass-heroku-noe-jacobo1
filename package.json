@@ -41,8 +41,11 @@
     "underscore": "^1.8.3"
   },
   "dependencies": {
-    "ejs": "^1.0.0",
-    "express": "^4.6.1"
-  },
-  "homepage": "https://github.com/noe-jacoboDSI/localstorage-jquery-underscore-express-sass#readme"
+    "dependencies": {
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "express-ejs-layouts": "^1.1.0",
+    "underscore": "^1.8.3",
+    "body-parser":"*"
+  }
 }
