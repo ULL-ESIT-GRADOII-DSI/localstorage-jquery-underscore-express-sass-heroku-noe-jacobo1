@@ -30,7 +30,7 @@ var expressLayouts = require('express-ejs-layouts');
 app.set('layout', 'layout'); // defaults to 'layout'  '
 
 // Serve static files
-app.use(express.static(__dirname , 'public')); // ****directorio publico o mio vamos a probarhttp://expressjs.com/api.html#app.use#
+app.use(express.static('public')); // ****directorio publico o mio vamos a probarhttp://expressjs.com/api.html#app.use#
 app.set('expressLayaouts');
 
 //app.use(expressLayouts);
