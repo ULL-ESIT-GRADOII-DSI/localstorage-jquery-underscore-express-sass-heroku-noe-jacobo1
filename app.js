@@ -30,7 +30,7 @@ var expressLayouts = require('express-ejs-layouts');
 app.set('layout', 'layout'); // defaults to 'layout'  '
 
 // Serve static files
-app.use(express.static('public')); // ****directorio publico o mio vamos a probarhttp://expressjs.com/api.html#app.use#
+app.use(express.static(path.join(__dirname,'/'))); // ****directorio publico o mio vamos a probarhttp://expressjs.com/api.html#app.use#
 app.set('expressLayaouts');
 
 //app.use(expressLayouts);
@@ -38,16 +38,8 @@ app.set('expressLayaouts');
 // Luego la consultamos con app.get('port')
 app.set('port', (process.env.PORT || 8080));
 
-/*
-// define the home page route
-router.get('../assets/css/*', function(req, res) {
-  res.send('Birds home page');
-})
-// define the about route
-router.get('js', function(req, res) {
-  res.send('About birds');
-})//module exports al final ----------------------
-*/
+
+
 
 
 /*
@@ -62,21 +54,31 @@ router.get('js', function(req, res) {
  // instruct the app to use the `bodyParser()` middleware for all routes
  var bodyParser = require('body-parser')
  app.use(bodyParser.urlencoded({ extended: false }));
- //app.use('/static', express.static(__dirname + '/public'));//poner rutas obasoluta a los directorios que se van a servir
+
+
+ //app.get('/', function(req, res){
+//   res.send('hello world');// POne un hola en nuestro servidor
+// });
+app.get('',function(req,res){
+
+});
+
  app.get('/',function(req,res){
    // The form's action is '/' and its method is 'POST',
    // so the `app.post('/', ...` route will receive the
    // result of our form
-   res.render('index',{title:"Comma Separated Value Analyzer"});
+   res.render('index',{title:"Commando Separated Value Analyzer miapp"});
+
  });
  // A browser's default method is 'GET', so this
  // is the route that express uses when we visit
  // our site initially.
 
-
- app.get('',function(req,res){
-
+ app.get('/',function(req,res,next){
+       res.render('layaout',{title:"Analizador CSV"});
  });
+
+
 
  // This route receives the posted form.
  // As explained above, usage of 'body-parser' means
