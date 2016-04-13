@@ -76,8 +76,8 @@ app.set('port', (process.env.PORT || 8080));
  //     j.delimiter = '$';
  //});
  app.post('/',function(req,res,next){
-   var original = req.body.original;
-   res.render('layout',{title:"Layaout prueba "});
+   var original = req.body.original;//id del index.ejs
+   res.render('layout',{items:"aqi",title:"Layaout prueba "});
  });
 
 
