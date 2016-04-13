@@ -16,18 +16,20 @@
   <div>
     Write a CSV string. Click the table button. The program outputs a table with the specified data.</i><br>
   </div>
+  <form action="/prueba" method="get">
   <table>
-    <tr>
-      <form action="/prueba" method="post">
-      <th>CSV string:</th> <!-- autofocus attribute is HTML5 -->
-      <td><textarea autofocus cols = "80" rows = "5" id="original"></textarea></td>
-    </tr>
+      <tr>
+
+        <th>CSV string:</th> <!-- autofocus attribute is HTML5 -->
+        <td><textarea autofocus cols = "80" rows = "5" id="original"></textarea></td>
+      </tr>
   </table>
   <button class="boton" type="button" type="submit">table:</button><br>
   <span class="output" id="finaltable"></span>
+  </form>
 </div>
-<%- layout %>
-<li><a href="/prueba">Visit layaout</a>
+<%= layout %>
+<li><a href="/">Visit layaout</a>
 <footer><!--pie de pagina-->
       <div id="pie">
             <a href="http://alu0100836059.github.io/pagina_personal">"    Web Personal de Jacobo"</a>

@@ -67,7 +67,7 @@ app.set('port', (process.env.PORT || 8080));
    // The form's action is '/' and its method is 'POST',
    // so the `app.post('/', ...` route will receive the
    // result of our form
-   res.render('index',{title:"Commando Separated Value Analyzer miapp",layout:'a, b, c, d\naa, bb, cc, dd'});
+   res.render('index',{title:"Commando Separated Value Analyzer miapp",layout:"pintame"});
 
  });
  // A browser's default method is 'GET', so this
@@ -76,12 +76,11 @@ app.set('port', (process.env.PORT || 8080));
  //app.get('/',function(req,res){
  //     j.delimiter = '$';
  //});
- app.get('/prueba',function(req,res,next){
+ app.get('/',function(req,res){
    var original = req.body.original;//id del index.ejs
    var data= csv.calculate(original);
    console.log("llegamos a app render");
-   res.render('layout',{fillTable:data});
-   next();
+   res.render('layout',{items:data});
  });
 
 
