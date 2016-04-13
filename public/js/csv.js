@@ -3,7 +3,9 @@
   // See http://en.wikipedia.org/wiki/Comma-separated_values
 
   var regexp = /"((?:[^"\\]|\\.)*)"|([^,\s]+)|,\s*(?=,|$)|^\s*,/g
+
   exports.calculate = function(original) {
+
     var lines = original.split(/\n+\s*/);
     var commonLength = lines[0].match(regexp).length;
     var r = [];
@@ -12,6 +14,7 @@
       var remove1stquote = removecomma.replace(/^\s*"/, '');
       var removelastquote = remove1stquote.replace(/"\s*$/, '');
       var removeescapedquotes = removelastquote.replace(/\\"/, '"');
+      console.log("llegamos a los replace");
       return removeescapedquotes;
     };
 

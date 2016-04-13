@@ -3,7 +3,7 @@ var app = express()
 var path = require('path');
 
 var j = require('ejs');
-
+var csv = require('./public/js/csv.js');
 
 
 /*
@@ -78,7 +78,9 @@ app.set('port', (process.env.PORT || 8080));
  //});
  app.get('/prueba',function(req,res,next){
    var original = req.body.original;//id del index.ejs
-   res.render('layout',{items:data});
+   var data= csv.calculate(original);
+   console.log("llegamos a app render");
+   res.render('layout',{fillTable:data});
    next();
  });
 
