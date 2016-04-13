@@ -23,14 +23,14 @@ Invocar la siguiente función de middleware en la pila
 app.set('views', path.join(__dirname, 'views'));
 //app.set('views', path.join(__dirname, '../assets/*'));
 app.set('view engine', 'ejs');
-j.delimiter = '$';
+
 
 
 var expressLayouts = require('express-ejs-layouts');
 app.set('layout', 'layout'); // defaults to 'layout'  '
 
 // Serve static files
-app.use(express.static(path.join(__dirname,'/'))); // ****directorio publico o mio vamos a probarhttp://expressjs.com/api.html#app.use#
+app.use(express.static('public')); // Directorio de donde debe cargar los paquetes http://expressjs.com/api.html#app.use#
 app.set('expressLayaouts');
 
 //app.use(expressLayouts);
@@ -59,9 +59,7 @@ app.set('port', (process.env.PORT || 8080));
  //app.get('/', function(req, res){
 //   res.send('hello world');// POne un hola en nuestro servidor
 // });
-app.get('',function(req,res){
 
-});
 
  app.get('/',function(req,res){
    // The form's action is '/' and its method is 'POST',
@@ -73,11 +71,13 @@ app.get('',function(req,res){
  // A browser's default method is 'GET', so this
  // is the route that express uses when we visit
  // our site initially.
-
- app.get('/',function(req,res,next){
-       res.render('layaout',{title:"Analizador CSV"});
+ //app.get('/',function(req,res){
+ //     j.delimiter = '$';
+ //});
+ app.post('/',function(req,res){
+   var original = req.body.original;
+   res.render('layaout',{title:"Layaout prueba "});
  });
-
 
 
  // This route receives the posted form.
