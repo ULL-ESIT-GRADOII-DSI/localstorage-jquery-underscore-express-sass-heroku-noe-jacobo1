@@ -30,6 +30,7 @@ var expressLayouts = require('express-ejs-layouts');
 app.set('layout', 'layout'); // defaults to 'layout'  '
 
 // Serve static files
+//app.use(express.static(path.join(__dirname,'public')));
 app.use(express.static('public')); // Directorio de donde debe cargar los paquetes http://expressjs.com/api.html#app.use#
 app.set('expressLayaouts');
 
@@ -74,9 +75,9 @@ app.set('port', (process.env.PORT || 8080));
  //app.get('/',function(req,res){
  //     j.delimiter = '$';
  //});
- app.post('/',function(req,res){
+ app.post('/',function(req,res,next){
    var original = req.body.original;
-   res.render('layaout',{title:"Layaout prueba "});
+   res.render('layout',{title:"Layaout prueba "});
  });
 
 
