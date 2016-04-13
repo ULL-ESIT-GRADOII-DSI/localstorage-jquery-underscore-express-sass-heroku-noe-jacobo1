@@ -2,9 +2,6 @@
       <a href=".">Tests</a>
       <link href="../css/global.css" rel="stylesheet" type="text/css">
       <link href="../css/generado.css" rel="stylesheet" type="text/css">
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-      <script type="text/javascript" src="http://xregexp.com/v/3.1.0/xregexp-all.js"></script>
       <script type="text/javascript" src="../js/csv.js"></script>
       <script type="text/javascript" src="../js/main.js"></script>
 </div>
@@ -19,11 +16,12 @@
   </div>
   <table>
     <tr>
+      <form action="/prueba" method="post">
       <th>CSV string:</th> <!-- autofocus attribute is HTML5 -->
       <td><textarea autofocus cols = "80" rows = "5" id="original"></textarea></td>
     </tr>
   </table>
-  <button class="boton" type="button">table:</button><br>
+  <button class="boton" type="button" type="submit">table:</button><br>
   <span class="output" id="finaltable"></span>
 </div>
 <%= layout %>

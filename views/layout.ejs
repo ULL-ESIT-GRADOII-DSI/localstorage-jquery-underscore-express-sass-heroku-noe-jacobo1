@@ -4,9 +4,12 @@
 <head>
    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
    <title>Analizador CSV</title>
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   <script type="text/javascript" src="http://xregexp.com/v/3.1.0/xregexp-all.js"></script>
    <script type="text/html" id='fillTable'>
      <table id="result" class="center">
-       <% items.forEach(items, function(name,index) { %>
+       <% items.ForEach(items, function(name,index) { %>
          <tr class="<%= name.rowClass %>">
            <% name.value.ForEach(name.value, function(cell,index) { %>
              <td><%= cell %></td>
