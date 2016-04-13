@@ -1,7 +1,7 @@
 var express = require('express')
 var app = express()
 var path = require('path');
-var _ = require('underscore');
+
 var j = require('ejs');
 
 
@@ -24,14 +24,14 @@ app.set('views', path.join(__dirname, 'views'));
 //app.set('views', path.join(__dirname, '../assets/*'));
 app.set('view engine', 'ejs');
 
-app.use(express.static('public'));
+
 
 var expressLayouts = require('express-ejs-layouts');
 app.set('layout', 'layout'); // defaults to 'layout'  '
 
 // Serve static files
 //app.use(express.static(path.join(__dirname,'public')));
-// Directorio de donde debe cargar los paquetes http://expressjs.com/api.html#app.use#
+app.use(express.static('public'));// Directorio de donde debe cargar los paquetes http://expressjs.com/api.html#app.use#
 //app.use('static',express.static(__dirname + 'public'));
 app.set('expressLayaouts');
 
@@ -67,7 +67,7 @@ app.set('port', (process.env.PORT || 8080));
    // The form's action is '/' and its method is 'POST',
    // so the `app.post('/', ...` route will receive the
    // result of our form
-   res.render('index',{title:"Commando Separated Value Analyzer miapp",layout:"llega aqui"});
+   res.render('index',{title:"Commando Separated Value Analyzer miapp",layout:'a, b, c, d\naa, bb, cc, dd'});
 
  });
  // A browser's default method is 'GET', so this
@@ -76,9 +76,10 @@ app.set('port', (process.env.PORT || 8080));
  //app.get('/',function(req,res){
  //     j.delimiter = '$';
  //});
- app.post('/',function(req,res){
+ app.post('/',function(req,res,next){
    var original = req.body.original;//id del index.ejs
    res.render('layout',{items:"aqi",title:"Layaout prueba "});
+   next();
  });
 
 
