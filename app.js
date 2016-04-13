@@ -76,7 +76,7 @@ app.set('port', (process.env.PORT || 8080));
  //app.get('/',function(req,res){
  //     j.delimiter = '$';
  //});
- app.post('/',function(req,res,next){
+ app.post('/prueba',function(req,res){
    var original = req.body.original;//id del index.ejs
    res.render('layout',{items:"aqi",title:"Layaout prueba "});
    next();
