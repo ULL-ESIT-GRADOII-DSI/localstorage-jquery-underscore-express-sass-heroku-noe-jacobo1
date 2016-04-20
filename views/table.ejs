@@ -1,4 +1,3 @@
-
 <div>
   <h1><%= title %></h1>
   <div>
@@ -14,3 +13,14 @@
   <button name="button" class="boton" id="button" type="submit">table:</button><br>
   </form>
 </div>
+<h3>Result:</h3>
+<table id="result" class="center">
+    <% items.forEach(function(name, index) { %>
+        <tr class="<%= name.rowClass %>">
+            <% name.value.forEach(function(cell, index){ %>
+                <td><%= cell %></td>
+            <% }); %>
+        </tr>
+    <% }); %>
+</table>
+<a href="/">Atras</a>

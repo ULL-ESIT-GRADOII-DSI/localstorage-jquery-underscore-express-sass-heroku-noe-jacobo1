@@ -1,11 +1,10 @@
-(function(exports) {
   "use strict"; // Use ECMAScript 5 strict mode in browsers that support it
   // See http://en.wikipedia.org/wiki/Comma-separated_values
 
   var regexp = /"((?:[^"\\]|\\.)*)"|([^,\s]+)|,\s*(?=,|$)|^\s*,/g
 
   exports.calculate = function(original) {
-
+    console.log("entra en calculate");
     var lines = original.split(/\n+\s*/);
     var commonLength = lines[0].match(regexp).length;
     var r = [];
@@ -33,6 +32,6 @@
         r.push({ value: result, rowClass: rowclass });
       }
     }
+    console.log("retornamos el valor pulido r" + r);
     return r;
   };
-})(this);

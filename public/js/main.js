@@ -1,3 +1,4 @@
+(function(exports){
 main = function() {
   var original = document.getElementById("original").value;
   if (window.localStorage) localStorage.original = original;                                                  //localstorage= funciona como un hash
@@ -17,3 +18,4 @@ $(document).ready(function () {
   }
   $("button").click(main);
 });
+})(this);

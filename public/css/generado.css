@@ -1,10 +1,10 @@
 body {
   font: Helvetica, sans-serif;
-  background-color: #A4A4A4;
+  background-color: #FAAC58;
   width: 70%;
   position: relative;
   margin: auto;
-  background-color: #F7BE81; }
+ }
   body h1 {
     margin-top: 10px; }
   body table tr {
@@ -16,18 +16,24 @@ body {
     margin-top: 10px;
     background-color: #FE9A2E;
     font: #FF8000; }
-  body footer #pie {
-    height: 50px;
-    width: 70%; }
-    body footer #pie a {
-      font: #FF8000;
-      margin: 3px auto;
-      text-decoration: none;
-      background: #000;
-      color: #FFF;
-      border: 1px outset #CCC;
-      padding: 0.1em 0.5em;
-      hover-background: #CCB;
-      active-border: 1px inset #000; }
+    #pie{
+    margin-top: 25%;
+      margin-left: auto;
+      margin-right: auto;
+      -webkit-box-sizing:border-box;
+      -moz-box-sizing:border-box;
+      box-sizing:border-box;
+      width: 70%;
+      border-top: 2px solid #000;}
+      #pie a {
+        margin: 0.1px auto;
+        text-decoration: none;
+        background: #000;
+        width: 60%;
+        color: #FFF;
+        border: 1px outset #CCC;
+        padding: 0.1em 0.5em;
+        hover-background: #CCB;
+        active-border: 1px inset #000; }
 
 /*# sourceMappingURL=generado.css.map */

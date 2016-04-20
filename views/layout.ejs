@@ -1,27 +1,27 @@
+
 <!doctype html>
-
 <html>
-<head>
-   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-   <title><%= title %> Analizador CSV</title>
-   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-   <script type="text/javascript" src="http://xregexp.com/v/3.1.0/xregexp-all.js"></script>
-   <script type="text/html" id='fillTable'>
-     <table id="result" class="center">
-       <% items.ForEach(items, function(name,index) { %>
-         <tr class="<%= name.rowClass %>">
-           <% name.value.ForEach(name.value, function(cell,index) { %>
-             <td><%= cell %></td>
-           <% }); %>
-         </tr>
-       <% }); %>
-     </table>
-   </script>
-</head>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="../css/global.css" rel="stylesheet" type="text/css">
+    <link href="../css/generado.css" rel="stylesheet" type="text/css">
+    <title><%- title %>Analizador CSV</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
 
+  </head>
   <body>
-    <!--%- title % otr manera tmb con $-->
-     <%- index %>
+    <%- body %>
   </body>
+  <footer>
+      <div id="pie"><!--pie de pagina-->
+
+              <a href="http://alu0100836059.github.io/pagina_personal">"    Web Personal de Jacobo"</a>
+              <a href="https://github.com/noe-jacoboDSI/localstorage-jquery-underscore-express-sass">"Repositorio de la organización"</a>
+              <a href="http://dsi1516.github.io/Practica1">"Web Personal de Noé"</a><!---->
+              <a href="http://noe-jacobodsi.github.io/localstorage-jquery-underscore-express-sass/test/index.html">"Test"</a>
+    </div>
+  </footer>
+
 </html>
